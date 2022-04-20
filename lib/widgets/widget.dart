@@ -1,8 +1,8 @@
 part of flutter_cupertino_settings;
 
 /// Used to display a widget of any kind in [CupertinoSettings]
-/// It provices the correct height, color and border to create the intended look
-/// The optional [alignment] attribute allows to specify the aligment inside the container
+/// It provides the correct height, color and border to create the intended look
+/// The optional [alignment] attribute allows to specify the alignment inside the container
 /// The optional [style] attribute allows to specify a style (e.g. an Icon)
 class CSWidget extends StatelessWidget {
   final Widget widget;

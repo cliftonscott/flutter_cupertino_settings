@@ -4,15 +4,17 @@ part of flutter_cupertino_settings;
 /// The [title] attribute is optional.
 class CSHeader extends StatelessWidget {
   final String title;
+  final Color backgroundColor;
 
-  const CSHeader(this.title);
+  const CSHeader(this.title, this.backgroundColor);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 10.0, top: 30.0, bottom: 5.0),
       decoration: BoxDecoration(
-        color: CupertinoColors.systemGroupedBackground.resolveFrom(context),
+        // color: CupertinoColors.systemGroupedBackground.resolveFrom(context),
+        color: this.backgroundColor,
         border: Border(
           bottom: BorderSide(
             color: CupertinoColors.opaqueSeparator.resolveFrom(context),
