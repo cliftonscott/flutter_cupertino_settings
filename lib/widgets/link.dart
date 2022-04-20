@@ -94,7 +94,7 @@ class CSLink extends StatelessWidget {
               padding: const EdgeInsets.only(left: 1.0, right: 2.0),
               child: trailing ??
                   Icon(
-                    CupertinoIcons.right_chevron,
+                    Icons.arrow_forward_ios_rounded,
                     color: CupertinoColors.secondaryLabel.resolveFrom(context),
                     size: CS_CHEVRON_SIZE,
                   ),

@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' show Theme;
+import 'package:flutter/material.dart' show Icons, Theme;
 import 'package:flutter/services.dart';
 
 part 'widgets/button.dart';
