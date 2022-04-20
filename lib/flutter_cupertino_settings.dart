@@ -4,7 +4,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' show Icons, ListTile, Material, Theme;
+import 'package:flutter/material.dart'
+    show Colors, Divider, Icons, ListTile, Material, Theme;
 import 'package:flutter/services.dart';
 
 part 'widgets/button.dart';
@@ -65,7 +66,10 @@ class CupertinoSettings extends StatelessWidget {
       child: SafeArea(
         bottom: false,
         child: shrinkWrap
-            ? ListView.builder(
+            ? ListView.separated(
+                separatorBuilder: (context, index) => Divider(
+                  color: Colors.black26,
+                ),
                 shrinkWrap: shrinkWrap,
                 itemCount: items.length,
                 controller: scrollController,
@@ -74,7 +78,10 @@ class CupertinoSettings extends StatelessWidget {
             : Column(
                 children: <Widget>[
                   Expanded(
-                    child: ListView.builder(
+                    child: ListView.separated(
+                      separatorBuilder: (context, index) => Divider(
+                        color: Colors.black26,
+                      ),
                       shrinkWrap: shrinkWrap,
                       itemCount: items.length,
                       controller: scrollController,
