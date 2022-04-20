@@ -38,6 +38,7 @@ class CSLink extends StatelessWidget {
     return CSWidget(
       Material(
         child: ListTile(
+          onTap: onPressed,
           title: Text(title),
           subtitle: showSubtitle
               ? Text(
@@ -74,10 +75,4 @@ enum CellType {
 
   /// Left-aligned title, left-aligned subtitle below and right-aligned detail
   subtitleDetailStyle,
-
-  /// Left-aligned title and right-aligned detail
-  detailRightStyle,
-
-  /// right-aligned title and left-aligned detail
-  detailLeftStyle,
 }
