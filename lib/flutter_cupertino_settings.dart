@@ -69,6 +69,7 @@ class CupertinoSettings extends StatelessWidget {
             ? ListView.separated(
                 separatorBuilder: (context, index) => Divider(
                   color: Colors.black26,
+                  height: 1.0,
                 ),
                 shrinkWrap: shrinkWrap,
                 itemCount: items.length,
@@ -81,6 +82,7 @@ class CupertinoSettings extends StatelessWidget {
                     child: ListView.separated(
                       separatorBuilder: (context, index) => Divider(
                         color: Colors.black26,
+                        height: 1.0,
                       ),
                       shrinkWrap: shrinkWrap,
                       itemCount: items.length,
