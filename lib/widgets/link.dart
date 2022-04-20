@@ -35,34 +35,34 @@ class CSLink extends StatelessWidget {
         subtitle != null &&
         subtitle!.isNotEmpty;
 
-    return CSWidget(
-      Material(
-        child: ListTile(
-          onTap: onPressed,
-          title: Text(title),
-          subtitle: showSubtitle
-              ? Text(
-                  subtitle!,
-                  style: basicTextStyle(context).copyWith(
-                    color: CupertinoColors.secondaryLabel.resolveFrom(context),
-                    fontSize: subTitleFontSize,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.clip,
-                )
-              : null,
-          trailing: Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: CupertinoColors.secondaryLabel.resolveFrom(context),
-            size: CS_CHEVRON_SIZE,
-          ),
+    // return CSWidget(
+    return Material(
+      child: ListTile(
+        onTap: onPressed,
+        title: Text(title),
+        subtitle: showSubtitle
+            ? Text(
+                subtitle!,
+                style: basicTextStyle(context).copyWith(
+                  color: CupertinoColors.secondaryLabel.resolveFrom(context),
+                  fontSize: subTitleFontSize,
+                  fontWeight: FontWeight.w400,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.clip,
+              )
+            : null,
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: CupertinoColors.secondaryLabel.resolveFrom(context),
+          size: CS_CHEVRON_SIZE,
         ),
       ),
-      style: style,
-      addPaddingToBorder: addPaddingToBorder,
-      showTopBorder: showTopBorder,
     );
+    // style: style,
+    // addPaddingToBorder: addPaddingToBorder,
+    // showTopBorder: showTopBorder,
+    // );
   }
 }
 
