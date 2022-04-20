@@ -4,8 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' show Colors, Theme;
-import 'package:flutter/rendering.dart';
+import 'package:flutter/material.dart' show Theme;
 import 'package:flutter/services.dart';
 
 part 'widgets/button.dart';
@@ -49,19 +48,20 @@ class CupertinoSettings extends StatelessWidget {
   final List<Widget> items;
   final bool shrinkWrap;
   final ScrollController? scrollController;
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   const CupertinoSettings({
     required this.items,
     this.scrollController,
     this.shrinkWrap = false,
-    this.backgroundColor = Colors.white,
+    this.backgroundColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: backgroundColor,
+      color: backgroundColor ??
+          CupertinoColors.systemGroupedBackground.resolveFrom(context),
       child: SafeArea(
         bottom: false,
         child: shrinkWrap
