@@ -34,72 +34,26 @@ class CSLink extends StatelessWidget {
             cellType == CellType.subtitleStyle) &&
         subtitle != null &&
         subtitle!.isNotEmpty;
-    final showDetail = (cellType == CellType.subtitleDetailStyle ||
-            cellType == CellType.detailRightStyle) &&
-        detail != null &&
-        detail!.isNotEmpty;
 
     return CSWidget(
-      CupertinoButton(
-        padding: EdgeInsets.zero,
-        onPressed: onPressed,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Text(
-                    title,
-                    style: basicTextStyle(context).copyWith(
-                      color: CupertinoColors.label.resolveFrom(context),
-                      fontSize: titleFontSize,
-                    ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  if (showSubtitle) const SizedBox(height: 2),
-                  if (showSubtitle)
-                    Text(
-                      subtitle!,
-                      style: basicTextStyle(context).copyWith(
-                        color:
-                            CupertinoColors.secondaryLabel.resolveFrom(context),
-                        fontSize: subTitleFontSize,
-                        fontWeight: FontWeight.w400,
-                      ),
-                      maxLines: 1,
-                      overflow: TextOverflow.clip,
-                    ),
-                ],
-              ),
-            ),
-            if (showDetail) ...[
-              Text(
-                detail!,
+      ListTile(
+        title: Text(title),
+        subtitle: showSubtitle
+            ? Text(
+                subtitle!,
                 style: basicTextStyle(context).copyWith(
                   color: CupertinoColors.secondaryLabel.resolveFrom(context),
-                  fontSize: titleFontSize,
+                  fontSize: subTitleFontSize,
+                  fontWeight: FontWeight.w400,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.clip,
-              ),
-              const SizedBox(width: 4),
-            ],
-            Padding(
-              padding: const EdgeInsets.only(left: 1.0, right: 2.0),
-              child: trailing ??
-                  Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: CupertinoColors.secondaryLabel.resolveFrom(context),
-                    size: CS_CHEVRON_SIZE,
-                  ),
-            ),
-          ],
+              )
+            : null,
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: CupertinoColors.secondaryLabel.resolveFrom(context),
+          size: CS_CHEVRON_SIZE,
         ),
       ),
       style: style,
