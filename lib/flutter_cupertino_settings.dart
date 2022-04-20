@@ -31,7 +31,7 @@ const EdgeInsets CS_ICON_PADDING = EdgeInsets.only(
 );
 const CSWidgetStyle CS_DEFAULT_STYLE = CSWidgetStyle();
 const double CS_CHECK_SIZE = 20.0;
-const double CS_CHEVRON_SIZE = 17.0;
+const double CS_CHEVRON_SIZE = 24.0;
 
 /// Event for [CSSelection]
 typedef void SelectionCallback(int selected);

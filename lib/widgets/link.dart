@@ -95,9 +95,7 @@ class CSLink extends StatelessWidget {
               child: trailing ??
                   Icon(
                     CupertinoIcons.right_chevron,
-                    color: CupertinoColors.secondaryLabel
-                        .resolveFrom(context)
-                        .withOpacity(0.4),
+                    color: CupertinoColors.secondaryLabel.resolveFrom(context),
                     size: CS_CHEVRON_SIZE,
                   ),
             ),
