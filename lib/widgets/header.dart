@@ -14,11 +14,6 @@ class CSHeader extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10.0, top: 30.0, bottom: 5.0),
       decoration: BoxDecoration(
         color: this.backgroundColor,
-        border: Border(
-          bottom: BorderSide(
-            color: CupertinoColors.opaqueSeparator.resolveFrom(context),
-          ),
-        ),
       ),
       child: Text(
         title.toUpperCase(),
