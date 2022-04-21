@@ -48,16 +48,8 @@ class CSWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: CupertinoColors.secondarySystemGroupedBackground
             .resolveFrom(context),
-        // border: Border(
-        //   top: showTopBorder
-        //       ? BorderSide(
-        //           color: CupertinoColors.opaqueSeparator.resolveFrom(context),
-        //         )
-        //       : BorderSide.none,
-        // ),
       ),
       constraints: const BoxConstraints(minHeight: 42),
-      // height: height,
       padding: EdgeInsets.only(
         left: addPaddingToBorder ? padding.left : 0,
       ),
@@ -65,13 +57,6 @@ class CSWidget extends StatelessWidget {
         padding: padding.copyWith(
           left: addPaddingToBorder ? 2 : padding.left + 2,
         ),
-        // decoration: BoxDecoration(
-        //   border: Border(
-        //     bottom: BorderSide(
-        //       color: CupertinoColors.opaqueSeparator.resolveFrom(context),
-        //     ),
-        //   ),
-        // ),
         child: child,
       ),
     );
