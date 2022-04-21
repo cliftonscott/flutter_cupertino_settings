@@ -65,13 +65,13 @@ class CSWidget extends StatelessWidget {
         padding: padding.copyWith(
           left: addPaddingToBorder ? 2 : padding.left + 2,
         ),
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: CupertinoColors.opaqueSeparator.resolveFrom(context),
-            ),
-          ),
-        ),
+        // decoration: BoxDecoration(
+        //   border: Border(
+        //     bottom: BorderSide(
+        //       color: CupertinoColors.opaqueSeparator.resolveFrom(context),
+        //     ),
+        //   ),
+        // ),
         child: child,
       ),
     );

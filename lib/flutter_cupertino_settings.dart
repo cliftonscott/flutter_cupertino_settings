@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart'
-    show Colors, Divider, Icons, ListTile, Material, Theme;
+    show Divider, Icons, ListTile, Material, Theme;
 import 'package:flutter/services.dart';
 
 part 'widgets/button.dart';
@@ -68,7 +68,7 @@ class CupertinoSettings extends StatelessWidget {
         child: shrinkWrap
             ? ListView.separated(
                 separatorBuilder: (context, index) => Divider(
-                  color: Colors.black12,
+                  color: CupertinoColors.opaqueSeparator.resolveFrom(context),
                   height: 1.0,
                 ),
                 shrinkWrap: shrinkWrap,
@@ -81,7 +81,8 @@ class CupertinoSettings extends StatelessWidget {
                   Expanded(
                     child: ListView.separated(
                       separatorBuilder: (context, index) => Divider(
-                        color: Colors.black26,
+                        color: CupertinoColors.opaqueSeparator
+                            .resolveFrom(context),
                         height: 1.0,
                       ),
                       shrinkWrap: shrinkWrap,
