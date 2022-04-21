@@ -48,13 +48,13 @@ class CSWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: CupertinoColors.secondarySystemGroupedBackground
             .resolveFrom(context),
-        border: Border(
-          top: showTopBorder
-              ? BorderSide(
-                  color: CupertinoColors.opaqueSeparator.resolveFrom(context),
-                )
-              : BorderSide.none,
-        ),
+        // border: Border(
+        //   top: showTopBorder
+        //       ? BorderSide(
+        //           color: CupertinoColors.opaqueSeparator.resolveFrom(context),
+        //         )
+        //       : BorderSide.none,
+        // ),
       ),
       constraints: const BoxConstraints(minHeight: 42),
       // height: height,
