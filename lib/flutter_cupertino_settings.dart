@@ -68,7 +68,7 @@ class CupertinoSettings extends StatelessWidget {
         child: shrinkWrap
             ? ListView.separated(
                 separatorBuilder: (context, index) => Divider(
-                  color: Colors.black26,
+                  color: Colors.black12,
                   height: 1.0,
                 ),
                 shrinkWrap: shrinkWrap,
